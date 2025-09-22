@@ -9,9 +9,7 @@ struct BSidesBA2026App: App {
         WindowGroup {
             ContentView()
         }
-        
-        
-        
+    
         
     }
 }
