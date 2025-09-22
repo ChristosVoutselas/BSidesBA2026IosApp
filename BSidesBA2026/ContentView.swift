@@ -7,6 +7,8 @@ struct ContentView: View {
             // ℹ️ Info (FIRST TAB)
             InfoView()
                 .tabItem { Label("Info", systemImage: "info.circle") }
+            
+            
 
             // 📅 Schedule
             NavigationView {
