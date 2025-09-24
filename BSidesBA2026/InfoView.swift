@@ -13,6 +13,10 @@ struct InfoView: View {
                         .frame(maxWidth: .infinity)
                         .padding(.bottom, 10)
                     
+                    BannerAdView(adUnitID: "ca-app-pub-2522111807269313/1197562091")
+                        .frame(width: 320, height: 50) // Standard banner size
+                                        .frame(maxWidth: .infinity)
+                    
                     // Event Details
                     VStack(alignment: .leading, spacing: 8) {
                         Text("BSides Bratislava 2026")

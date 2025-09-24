@@ -4,6 +4,10 @@ struct SessionDetailView: View {
     let session: EventSession
 
     var body: some View {
+        
+        BannerAdView(adUnitID: "ca-app-pub-2522111807269313/3832847182")
+            .frame(width: 320, height: 50) // Standard banner size
+                            .frame(maxWidth: .infinity)
         ScrollView {
             VStack(alignment: .leading, spacing: 12) {
                 Text(session.title)

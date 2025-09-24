@@ -17,6 +17,9 @@ struct SponsorsView: View {
     
     var body: some View {
         NavigationView {
+        
+            
+            
             ScrollView {
                 VStack(alignment: .leading, spacing: 20) {
                     ForEach(groupedSponsors.keys.sorted(), id: \.self) { category in
@@ -47,6 +50,10 @@ struct SponsorsView: View {
                         }
                     }
                     
+                    BannerAdView(adUnitID: "ca-app-pub-2522111807269313/4051682494")
+                        .frame(width: 320, height: 50) // Standard banner size
+                                        .frame(maxWidth: .infinity)
+                    
                     // Become a Sponsor button
                     VStack {
                         Button {
@@ -66,7 +73,7 @@ struct SponsorsView: View {
                 .padding(.vertical)
             }
             .background(Color.white) // ✅ Always white background
-            .navigationTitle("Sponsors")
+            .navigationTitle("")
         }
         .background(Color.white) // ✅ Keep nav container white
         .toast(isPresented: $showingToast, message: "Opening Mail…")

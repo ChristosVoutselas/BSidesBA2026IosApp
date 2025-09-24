@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B66FB6952E789B2A004FF549 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B66FB6942E789B2A004FF549 /* MapKit.framework */; };
+		B6AB8CE32E84391F00E9CB22 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6AB8CE22E84391F00E9CB22 /* MapKit.framework */; };
+		B6AB8CE62E84399B00E9CB22 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = B6AB8CE52E84399B00E9CB22 /* GoogleMobileAds */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +32,7 @@
 		B62976F02E76F4A2002AFE2D /* BSidesBA2026.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BSidesBA2026.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B62976FD2E76F4A3002AFE2D /* BSidesBA2026Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BSidesBA2026Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B62977072E76F4A3002AFE2D /* BSidesBA2026UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BSidesBA2026UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B66FB6942E789B2A004FF549 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk/System/iOSSupport/System/Library/Frameworks/MapKit.framework; sourceTree = DEVELOPER_DIR; };
+		B6AB8CE22E84391F00E9CB22 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -70,6 +71,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6AB8CE62E84399B00E9CB22 /* GoogleMobileAds in Frameworks */,
+				B6AB8CE32E84391F00E9CB22 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,7 +80,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B66FB6952E789B2A004FF549 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,7 +117,7 @@
 		B62977352E76F5D6002AFE2D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B66FB6942E789B2A004FF549 /* MapKit.framework */,
+				B6AB8CE22E84391F00E9CB22 /* MapKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -140,6 +142,7 @@
 			);
 			name = BSidesBA2026;
 			packageProductDependencies = (
+				B6AB8CE52E84399B00E9CB22 /* GoogleMobileAds */,
 			);
 			productName = BSidesBA2026;
 			productReference = B62976F02E76F4A2002AFE2D /* BSidesBA2026.app */;
@@ -223,6 +226,9 @@
 			);
 			mainGroup = B62976E72E76F4A2002AFE2D;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				B6AB8CE42E84399100E9CB22 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = B62976F12E76F4A2002AFE2D /* Products */;
 			projectDirPath = "";
@@ -428,6 +434,7 @@
 				DEVELOPMENT_TEAM = PZ3A4EK276;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BSidesBA2026/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "BSides Bratislava 2026";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -439,7 +446,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = voutselasgroup.BSidesBA2026;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -462,6 +469,7 @@
 				DEVELOPMENT_TEAM = PZ3A4EK276;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BSidesBA2026/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "BSides Bratislava 2026";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -473,7 +481,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = voutselasgroup.BSidesBA2026;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -616,6 +624,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B6AB8CE42E84399100E9CB22 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.11.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B6AB8CE52E84399B00E9CB22 /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B6AB8CE42E84399100E9CB22 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B62976E82E76F4A2002AFE2D /* Project object */;
 }

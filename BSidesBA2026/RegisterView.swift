@@ -14,6 +14,11 @@ struct RegisterView: View {
                     .frame(maxWidth: .infinity)
                     .padding(.bottom, 10)
                 
+                
+                BannerAdView(adUnitID: "ca-app-pub-2522111807269313/1861289965")
+                    .frame(width: 320, height: 50) // Standard banner size
+                                    .frame(maxWidth: .infinity)
+                
                 // Header
                 Text("Register for BSides Bratislava 2026")
                     .font(.title2)
