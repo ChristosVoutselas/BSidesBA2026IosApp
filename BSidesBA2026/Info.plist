@@ -8,6 +8,10 @@
 	</array>
 	<key>GADApplicationIdentifier</key>
 	<string>ca-app-pub-2522111807269313~5258550479</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>remote-notification</string>
+	</array>
 	<key>UTImportedTypeDeclarations</key>
 	<array>
 		<dict/>

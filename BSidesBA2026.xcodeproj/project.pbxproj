@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		B6AB8CE32E84391F00E9CB22 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6AB8CE22E84391F00E9CB22 /* MapKit.framework */; };
 		B6AB8CE62E84399B00E9CB22 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = B6AB8CE52E84399B00E9CB22 /* GoogleMobileAds */; };
+		B6DE92742E89AF9600171672 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = B6DE92732E89AF9600171672 /* FirebaseMessaging */; };
+		B6DE92792E89BED600171672 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = B6DE92782E89BED600171672 /* FirebaseCore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,7 +73,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6DE92742E89AF9600171672 /* FirebaseMessaging in Frameworks */,
 				B6AB8CE62E84399B00E9CB22 /* GoogleMobileAds in Frameworks */,
+				B6DE92792E89BED600171672 /* FirebaseCore in Frameworks */,
 				B6AB8CE32E84391F00E9CB22 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,6 +147,8 @@
 			name = BSidesBA2026;
 			packageProductDependencies = (
 				B6AB8CE52E84399B00E9CB22 /* GoogleMobileAds */,
+				B6DE92732E89AF9600171672 /* FirebaseMessaging */,
+				B6DE92782E89BED600171672 /* FirebaseCore */,
 			);
 			productName = BSidesBA2026;
 			productReference = B62976F02E76F4A2002AFE2D /* BSidesBA2026.app */;
@@ -228,6 +234,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				B6AB8CE42E84399100E9CB22 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
+				B6DE92722E89AF7900171672 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = B62976F12E76F4A2002AFE2D /* Products */;
@@ -429,8 +436,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BSidesBA2026/BSidesBA2026.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = PZ3A4EK276;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -446,7 +454,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = voutselasgroup.BSidesBA2026;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -464,8 +472,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BSidesBA2026/BSidesBA2026Release.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = PZ3A4EK276;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -481,7 +490,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = voutselasgroup.BSidesBA2026;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -634,6 +643,14 @@
 				minimumVersion = 12.11.0;
 			};
 		};
+		B6DE92722E89AF7900171672 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.3.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -641,6 +658,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B6AB8CE42E84399100E9CB22 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
 			productName = GoogleMobileAds;
+		};
+		B6DE92732E89AF9600171672 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B6DE92722E89AF7900171672 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		B6DE92782E89BED600171672 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B6DE92722E89AF7900171672 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
